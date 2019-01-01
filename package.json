@@ -2,23 +2,27 @@
   "name": "timer",
   "version": "1.0.0",
   "description": "Timer application",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "node_modules/.bin/next",
     "build": "node_modules/.bin/next build",
-    "start": "node_modules/.bin/next start -p $PORT",
+    "start": "NODE_ENV=production node server.js",
     "heroku-postbuild": "npm run build",
     "deploy:heroku": "git push heroku master"
   },
   "author": "Grégory MAGALLON",
   "license": "ISC",
+  "devDependencies": {
+    "heroku": "^7.19.4"
+  },
   "dependencies": {
-    "next": "^7.0.2",
     "mobx": "^5.8.0",
     "mobx-react": "^5.4.3",
+    "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-icons-kit": "^1.2.1",
+    "sw-precache-webpack-plugin": "^0.11.5",
     "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@babel/plugin-proposal-decorators": "^7.2.3"
   }

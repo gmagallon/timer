@@ -12,6 +12,7 @@ export default class MyDocument extends Document {
                 <Head>
                     <meta name="Description" content="Timer for exercices" />
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <link rel="manifest" href="/static/manifest.webmanifest" />
                     <style>{`
                         html, body, #__next {
                             height: 100%;
